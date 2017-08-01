@@ -1,0 +1,100 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="12118" systemVersion="16F73" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" colorMatched="YES" initialViewController="kSF-QC-HBt">
+    <device id="retina4_7" orientation="portrait">
+        <adaptation id="fullscreen"/>
+    </device>
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="12086"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <scenes>
+        <!--View Controller-->
+        <scene sceneID="tne-QT-ifu">
+            <objects>
+                <viewController automaticallyAdjustsScrollViewInsets="NO" id="BYZ-38-t0r" customClass="ViewController" customModule="TextViewUrlRecognizer" customModuleProvider="target" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="y3c-jy-aDJ"/>
+                        <viewControllerLayoutGuide type="bottom" id="wfy-db-euE"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="8bC-Xf-vdC">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="H91-gF-KNJ" userLabel="Container View">
+                                <rect key="frame" x="37.5" y="233.5" width="300" height="200"/>
+                                <subviews>
+                                    <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" editable="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Gtr-K4-3OO">
+                                        <rect key="frame" x="8" y="8" width="284" height="184"/>
+                                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                        <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                        <textInputTraits key="textInputTraits" autocapitalizationType="sentences"/>
+                                        <dataDetectorType key="dataDetectorTypes" link="YES"/>
+                                    </textView>
+                                </subviews>
+                                <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="300" id="9sw-Bd-DX4"/>
+                                    <constraint firstItem="Gtr-K4-3OO" firstAttribute="leading" secondItem="H91-gF-KNJ" secondAttribute="leading" constant="8" id="FRT-7z-mli"/>
+                                    <constraint firstAttribute="height" constant="200" id="PgQ-qz-zPB"/>
+                                    <constraint firstAttribute="bottom" secondItem="Gtr-K4-3OO" secondAttribute="bottom" constant="8" id="VNQ-J9-Cvg"/>
+                                    <constraint firstAttribute="trailing" secondItem="Gtr-K4-3OO" secondAttribute="trailing" constant="8" id="obw-hZ-2JT"/>
+                                    <constraint firstItem="Gtr-K4-3OO" firstAttribute="top" secondItem="H91-gF-KNJ" secondAttribute="top" constant="8" id="vzf-fX-Axz"/>
+                                </constraints>
+                            </view>
+                        </subviews>
+                        <color key="backgroundColor" red="0.14370152480000001" green="0.4016161681" blue="0.46712404819999997" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                        <constraints>
+                            <constraint firstItem="H91-gF-KNJ" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="2XU-Yh-8fI"/>
+                            <constraint firstItem="H91-gF-KNJ" firstAttribute="centerY" secondItem="8bC-Xf-vdC" secondAttribute="centerY" id="PMj-ck-jH5"/>
+                        </constraints>
+                    </view>
+                    <navigationItem key="navigationItem" id="oJT-Tl-53V"/>
+                    <connections>
+                        <outlet property="containerView" destination="H91-gF-KNJ" id="msA-Vr-L9W"/>
+                        <outlet property="textView" destination="Gtr-K4-3OO" id="qbJ-Oa-Mhq"/>
+                        <segue destination="N0L-wz-CKC" kind="show" identifier="see hash" id="YKn-aW-4Jw"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="190" y="-252"/>
+        </scene>
+        <!--Detail View Controller-->
+        <scene sceneID="NaQ-qw-irL">
+            <objects>
+                <viewController id="N0L-wz-CKC" customClass="DetailViewController" customModule="TextViewUrlRecognizer" customModuleProvider="target" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="Aza-R3-2bn"/>
+                        <viewControllerLayoutGuide type="bottom" id="kZd-GA-MTn"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="4Wo-qJ-oEK">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                    </view>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="JSb-BZ-TpH" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="1081" y="-252"/>
+        </scene>
+        <!--Navigation Controller-->
+        <scene sceneID="TJr-gv-raA">
+            <objects>
+                <navigationController automaticallyAdjustsScrollViewInsets="NO" id="kSF-QC-HBt" sceneMemberID="viewController">
+                    <toolbarItems/>
+                    <navigationBar key="navigationBar" contentMode="scaleToFill" id="Cqw-HG-arS">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="44"/>
+                        <autoresizingMask key="autoresizingMask"/>
+                    </navigationBar>
+                    <nil name="viewControllers"/>
+                    <connections>
+                        <segue destination="BYZ-38-t0r" kind="relationship" relationship="rootViewController" id="Snu-ac-HFs"/>
+                    </connections>
+                </navigationController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="o0o-jD-JLU" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="-639.20000000000005" y="-252.32383808095955"/>
+        </scene>
+    </scenes>
+</document>
